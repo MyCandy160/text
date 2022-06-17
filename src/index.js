@@ -1,7 +1,6 @@
 import { addfn } from "./app/app.js";
-<<<<<<< HEAD
-import app from "./App.vue";
-=======
+
+
 import "./style/index.css";
 import "./style/index.less";
 
@@ -14,6 +13,6 @@ img2.src = image2;
 document.body.appendChild(img);
 document.body.appendChild(img2);
 import './assets/fonts/iconfont.css'
->>>>>>> imgfonts
+
 
 console.log(addfn(1));
