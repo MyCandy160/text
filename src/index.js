@@ -1,6 +1,5 @@
 import { addfn } from "./app/app.js";
 
-
 import "./style/index.css";
 import "./style/index.less";
 
@@ -12,7 +11,8 @@ img.src = image;
 img2.src = image2;
 document.body.appendChild(img);
 document.body.appendChild(img2);
-import './assets/fonts/iconfont.css'
-
+import "./assets/fonts/iconfont.css";
+import app from "./App.vue";
+console.log(app);
 
 console.log(addfn(1));
