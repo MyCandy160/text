@@ -16,6 +16,32 @@ module.exports = {
   ],
   devServer: {
     port: 2002, // 端口号
-    open: true
-  }
+    open: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.less$/i,
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
+      {
+        test: /\.(png|gif|jpg|jpeg)$/i,
+        type: "asset",
+        generator: { filename: "image/[hash:6][ext]" },
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/i,
+        type: "asset/resource",
+        generator: { filename: "fonts-[name].[hash:6][ext]" },
+      },
+      {
+        test: /\.js$/i,
+        use: ["babel-loader"],
+      },
+    ],
+  },
 };
