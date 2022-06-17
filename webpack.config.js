@@ -16,6 +16,18 @@ module.exports = {
   ],
   devServer: {
     port: 2002, // 端口号
-    open: true
-  }
+    open: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.less$/i,
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
+    ],
+  },
 };
